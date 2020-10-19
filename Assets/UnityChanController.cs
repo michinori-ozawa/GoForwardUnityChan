@@ -68,6 +68,7 @@ public class UnityChanController : MonoBehaviour
                         // UIControllerのGameOver関数を呼び出して画面上に「GameOver」と表示する（追加）
                         GameObject.Find("Canvas").GetComponent<UIController> ().GameOver ();
 
+
                         // ユニティちゃんを破棄する（追加）
                         Destroy (gameObject);
                 }
