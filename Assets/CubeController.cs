@@ -10,6 +10,7 @@ public class CubeController : MonoBehaviour
         // 消滅位置
         private float deadLine = -10;
 
+
         // Use this for initialization
         void Start()
         {
@@ -28,4 +29,17 @@ public class CubeController : MonoBehaviour
                         Destroy (gameObject);
                 }
         }
+		
+		// called when the cube hits the floor_後ろのCol2Dは分かりやすく名前を付けた
+		void OnCollisionEnter2D(Collision2D col2D)
+		{
+			    //もしタグが「cube」なら音を再生する
+                if (col2D.gameObject.tag== "cube")
+                {
+                        GetComponent<AudioSource>().Play();
+                }
+					
+				
+		}
+		
 }
