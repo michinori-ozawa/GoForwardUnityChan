@@ -38,7 +38,12 @@ public class CubeController : MonoBehaviour
                 {
                         GetComponent<AudioSource>().Play();
                 }
-					
+				
+				//もしタグが「ground」なら音を再生する
+                if (col2D.gameObject.tag== "ground")
+                {
+                        GetComponent<AudioSource>().Play();
+                }
 				
 		}
 		
